@@ -13,5 +13,10 @@ namespace MyWallet.Services
         {
             return base.ListContent();
         }
+
+        public override Task FillContentAsync(Users entity)
+        {
+            return base.FillContentAsync(entity);
+        }
     }
 }

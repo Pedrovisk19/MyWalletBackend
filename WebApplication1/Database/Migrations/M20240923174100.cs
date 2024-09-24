@@ -8,10 +8,10 @@ namespace MyWallet.Database.Migrations
         public override void Up()
         {
             Create.Table("Users")
-                .WithColumn("Id").AsInt32().PrimaryKey().Identity()
+                .WithColumn("Id").AsInt32().NotNullable().Identity().PrimaryKey()
                 .WithColumn("Nome").AsString(255)
-                .WithColumn("Senha").AsDateTime()
-                .WithColumn("Email").AsString(255).Unique();
+                .WithColumn("Senha").AsString(255)
+                .WithColumn("Email").AsString(255);
         }
 
         public override void Down()
