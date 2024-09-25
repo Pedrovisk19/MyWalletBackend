@@ -22,11 +22,11 @@ namespace MyWallet.Controllers
         [HttpGet]
         public IActionResult GetAllUsers()
         {
-            var users = _userService.ListContent();
+            var users = _userService.FindAll();
             return Ok(users);
         }
 
-        [HttpPost]
+        [HttpPost("Save")]
         public IActionResult Save(Users entity)
         {
             if (entity == null)
@@ -34,8 +34,22 @@ namespace MyWallet.Controllers
                 return BadRequest("Invalid user data."); // Retorne erro se os dados forem inválidos
             }
 
-            _userService.FillContentAsync(entity);
-            return CreatedAtAction(nameof(GetAllUsers), new { id = entity.Id }, entity); // Retorne a resposta apropriada
+            _userService.Create(entity);
+            return Ok(); // Retorne a resposta apropriada
         }
+        
+        [HttpPost("Edit")]
+        public IActionResult Edit(Users entity)
+        {
+            if (entity == null)
+            {
+                return BadRequest("Invalid user data."); // Retorne erro se os dados forem inválidos
+            }
+
+            _userService.Update(entity);
+            return Ok(); // Retorne a resposta apropriada
+        }
+
+
     }
 }

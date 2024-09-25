@@ -8,11 +8,11 @@ namespace MyWallet.Database.Migrations
         public override void Up()
         {
             Create.Table("Cards")
-                .WithColumn("Id").AsInt32().NotNullable().Identity().PrimaryKey()
+                .WithColumn("Id").AsInt64().NotNullable().Identity().PrimaryKey()
                 .WithColumn("Numeros").AsString(255)
-                .WithColumn("CodSeguranca").AsInt32()
+                .WithColumn("CodSeguranca").AsInt64()
                 .WithColumn("Validade").AsString(255)
-                .WithColumn("UserCardId").AsInt32();
+                .WithColumn("UserCardId").AsInt64();
         }
 
         public override void Down()

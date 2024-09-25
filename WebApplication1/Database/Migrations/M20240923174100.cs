@@ -8,7 +8,7 @@ namespace MyWallet.Database.Migrations
         public override void Up()
         {
             Create.Table("Users")
-                .WithColumn("Id").AsInt32().NotNullable().Identity().PrimaryKey()
+                .WithColumn("Id").AsInt64().NotNullable().Identity().PrimaryKey()
                 .WithColumn("Nome").AsString(255)
                 .WithColumn("Senha").AsString(255)
                 .WithColumn("Email").AsString(255);

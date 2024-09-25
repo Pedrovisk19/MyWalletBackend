@@ -1,6 +1,8 @@
-﻿namespace MyWallet.Controllers
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace MyWallet.Controllers
 {
-    public class CardsController
+    public class CardsController : ControllerBase
     {
 
         

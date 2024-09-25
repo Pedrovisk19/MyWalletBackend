@@ -1,8 +1,9 @@
-﻿namespace MyWallet.Models
+﻿using MyWallet.Models.Base;
+
+namespace MyWallet.Models
 {
-    public class Cards
+    public class Cards : BaseEntity
     {
-        public virtual int Id { get; set; }
         public virtual string Numeros { get; set; }
         public virtual string CodSeguranca { get; set; }
         public virtual string Validade { get; set; }

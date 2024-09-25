@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MyWallet.Models;
 
 namespace WebApplication1
 {
@@ -7,5 +8,7 @@ namespace WebApplication1
         public MyDbContext(DbContextOptions<MyDbContext> options) : base(options)
         {
         }
+
+        public DbSet<Users> Users { get; set; }
     }
 }
