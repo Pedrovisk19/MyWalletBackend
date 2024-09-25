@@ -3,16 +3,16 @@ using MyWallet.Models;
 
 namespace MyWallet.Mappings
 {
-    public class CardsMap : ClassMap<Cards>
+    public class UserMoneyMap : ClassMap<UserMoney>
     {
-        public CardsMap()
+        public UserMoneyMap()
         {
-            Table("Cards");
-            Id(x => x.Id).GeneratedBy.Identity(); 
-            Map(x => x.Numeros).Not.Nullable(); 
-            Map(x => x.Validade).Not.Nullable();
-            Map(x => x.CodSeguranca).Not.Nullable(); 
-            Map(x => x.UserCardId);
+            Table("UserMoney");
+            Id(x => x.Id).GeneratedBy.Identity();
+            Map(x => x.Income).Not.Nullable();
+            Map(x => x.Outcome).Not.Nullable();
+            Map(x => x.Total).Not.Nullable(); 
+            Map(x => x.UserMoneyId);
         }
     }
 }

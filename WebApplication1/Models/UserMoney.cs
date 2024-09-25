@@ -2,7 +2,7 @@
 
 namespace MyWallet.Models
 {
-    public class Cards : BaseEntity
+    public class UserMoney : BaseEntity
     {
         public virtual string Numeros { get; set; }
         public virtual string CodSeguranca { get; set; }

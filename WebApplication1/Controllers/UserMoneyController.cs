@@ -2,7 +2,7 @@
 
 namespace MyWallet.Controllers
 {
-    public class CardsController : ControllerBase
+    public class UserMoneyController : ControllerBase
     {
 
         

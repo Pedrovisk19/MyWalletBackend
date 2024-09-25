@@ -7,12 +7,12 @@ namespace MyWallet.Database.Migrations
     {
         public override void Up()
         {
-            Create.Table("Cards")
+            Create.Table("UserMoney")
                 .WithColumn("Id").AsInt64().NotNullable().Identity().PrimaryKey()
-                .WithColumn("Numeros").AsString(255)
-                .WithColumn("CodSeguranca").AsInt64()
-                .WithColumn("Validade").AsString(255)
-                .WithColumn("UserCardId").AsInt64();
+                .WithColumn("Income").AsString(255)
+                .WithColumn("Outcome").AsInt64()
+                .WithColumn("Total").AsString(255)
+                .WithColumn("UserMoneyId").AsInt64();
         }
 
         public override void Down()
