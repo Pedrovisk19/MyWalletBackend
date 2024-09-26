@@ -4,10 +4,10 @@ namespace MyWallet.Models
 {
     public class UserMoney : BaseEntity
     {
-        public virtual string Numeros { get; set; }
-        public virtual string CodSeguranca { get; set; }
-        public virtual string Validade { get; set; }
-        public virtual string UserCardId { get; set; }
+        public virtual long Income { get; set; }
+        public virtual long Outcome { get; set; }
+        public virtual long Total { get; set; }
+        public virtual long UserMoneyId { get; set; }
 
     }
 }

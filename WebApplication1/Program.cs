@@ -26,6 +26,7 @@ builder.Services.AddCors(options =>
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<UsersService>(); // Adicione esta linha
+builder.Services.AddScoped<UserMoneyService>(); // Adicione esta linha
 
 
 builder.Services.AddDbContext<MyDbContext>(options =>

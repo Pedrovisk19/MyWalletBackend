@@ -10,12 +10,10 @@ namespace MyWallet.Controllers
     public class UsersController : ControllerBase
     {
         private readonly UsersService _userService;
-        private readonly ILogger<WeatherForecastController> _logger;
 
-        public UsersController(UsersService userService, ILogger<WeatherForecastController> logger)
+        public UsersController(UsersService userService)
         {
             _userService = userService;
-            _logger = logger;
 
         }
 

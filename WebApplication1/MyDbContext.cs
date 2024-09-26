@@ -10,5 +10,6 @@ namespace WebApplication1
         }
 
         public DbSet<Users> Users { get; set; }
+        public DbSet<UserMoney> UserMoney { get; set; }
     }
 }

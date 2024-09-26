@@ -9,9 +9,9 @@ namespace MyWallet.Database.Migrations
         {
             Create.Table("UserMoney")
                 .WithColumn("Id").AsInt64().NotNullable().Identity().PrimaryKey()
-                .WithColumn("Income").AsString(255)
+                .WithColumn("Income").AsInt64()
                 .WithColumn("Outcome").AsInt64()
-                .WithColumn("Total").AsString(255)
+                .WithColumn("Total").AsInt64()
                 .WithColumn("UserMoneyId").AsInt64();
         }
 

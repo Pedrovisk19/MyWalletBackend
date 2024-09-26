@@ -10,6 +10,9 @@ namespace MyWallet.Database.Migrations
         {
             Insert.IntoTable("Users")
                 .Row(new { Nome = "Pedro souza", Email = "pedro@teste.com", Senha = "Pedro486" });
+            
+            Insert.IntoTable("UserMoney")
+                .Row(new { Income = 2000, Outcome = 500, Total = 1500, UserMoneyId = 1 });
         }
 
         public override void Down()
